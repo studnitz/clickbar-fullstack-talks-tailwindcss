@@ -7,8 +7,12 @@
     "test": "echo \"there are no tests\""
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.4",
     "code-surfer": "3.1.0",
-    "mdx-deck": "3.0.13"
+    "gatsby-plugin-postcss": "^3.7.0",
+    "mdx-deck": "3.0.13",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3"
   },
   "name": "clickbar-fullstack-talks-tailwindcss"
 }
