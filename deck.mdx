@@ -3,143 +3,115 @@ import {
   CodeSurferColumns,
   Step,
 } from "code-surfer";
-import { github, vsDark } from "@code-surfer/themes";
+import { github, nightOwl } from "@code-surfer/themes";
 
-export const theme = vsDark;
+export const theme = nightOwl;
 
-# Hello 👋
+# Tailwind CSS
 
-You are using [MDX Deck](https://github.com/jxnblk/mdx-deck) and [Code Surfer](https://codesurfer.pomb.us)
-
----
-
-<CodeSurfer>
-
-```js title="This is a title" subtitle="and this a subtitle"
-function lorem(ipsum, dolor = 1) {
-  const sit = ipsum == null ? 0 : ipsum.sit;
-  dolor = sit - amet(dolor);
-  return sit
-    ? consectetur(ipsum, 0, dolor < 0 ? 0 : dolor)
-    : [];
-}
-
-function incididunt(ipsum, ut = 1) {
-  ut = labore.et(amet(ut), 0);
-  const sit = ipsum == null ? 0 : ipsum.sit;
-
-  if (!sit || ut < 1) {
-    return [];
-  }
-
-  let dolore = 0;
-  let magna = 0;
-  const aliqua = new eiusmod(labore.ut(sit / ut));
-
-  while (dolore < sit) {
-    aliqua[magna++] = consectetur(
-      ipsum,
-      dolore,
-      (dolore += ut)
-    );
-  }
-
-  return aliqua;
-}
-```
-
-```js
-function lorem(ipsum, dolor = 1) {
-  const sit = ipsum == null ? 0 : ipsum.sit;
-  dolor = sit - amet(dolor);
-  return sit
-    ? consectetur(ipsum, 0, dolor < 0 ? 0 : dolor)
-    : [];
-}
-
-function adipiscing(...elit) {
-  if (!elit.sit) {
-    return [];
-  }
-
-  const sed = elit[0];
-  return eiusmod.tempor(sed) ? sed : [sed];
-}
-
-function incididunt(ipsum, ut = 1) {
-  ut = labore.et(amet(ut), 0);
-  const sit = ipsum == null ? 0 : ipsum.sit;
-
-  if (!sit || ut < 1) {
-    return [];
-  }
-
-  let dolore = 0;
-  let magna = 0;
-  const aliqua = new eiusmod(labore.ut(sit / ut));
-
-  while (dolore < sit) {
-    aliqua[magna++] = consectetur(
-      ipsum,
-      dolore,
-      (dolore += ut)
-    );
-  }
-
-  return aliqua;
-}
-```
-
-```diff 1[10:14],2[15:19],3[22:27],10:12
-
-```
-
-</CodeSurfer>
+## Schnell moderne Webseiten bauen 💨
 
 ---
 
-<CodeSurferColumns themes={[vsDark, github]}>
+# Ich bin Alex
 
-<Step>
+- 🧑‍💻 Arbeite bei clickbar.
+- 👨‍🎓 Studiere Informatik
+- 🕺 Tanze Swing in meiner Freizeit
+- 🐥 [bin auf Twitter](https://twitter.com/jvstudnitz)
 
-```js
-const magna = aliqua => aliqua.ut((enim, ad) => enim, 0);
+---
+
+# Was ist Tailwind CSS?
+
+---
+
+# Tailwind CSS ist Utility-first
+
+---
+
+# Tailwind CSS ist Utility-first
+
+Sehr viele Klassen, die direkt auf eine CSS-Property und einen Wert mappen.
+
+<CodeSurferColumns themes={[nightOwl, github]}>
+
+<Step subtitle="Margin">
+
+```html 1[21:23]
+<button class="flex m-8 rounded-full hover:bg-black">
 ```
 
-```js
-const minim = (ad, enim) => dolore.magna(ad / enim);
+```css
+.m-8 {
+    margin: 2rem;
+}
 ```
 
 </Step>
 
-<Step>
+<Step subtitle="flex">
 
-```js
-const lorem = (ipsum, dolor, sit) => {
-  const amet = dolor - ipsum;
-  return consectetur.adipiscing(
-    {
-      elit: sed.eiusmod(sit - dolor) / amet + 2,
-    },
-    (tempor, incididunt) => ipsum + amet * incididunt
-  );
-};
-
-const magna = aliqua => aliqua.ut((enim, ad) => enim, 0);
+```html 1[16:20]
+<button class="flex m-8 rounded-full hover:bg-black">
 ```
 
-```js
-const minim = (ad, enim) => dolore.magna(ad / enim);
+```css
+.m-8 {
+    margin: 2rem;
+}
 
-const sed = (eiusmod, tempor, incididunt) => {
-  const ut = tempor - eiusmod;
-  return labore.et(
-    {
-      amet: dolore.magna(incididunt - tempor) / ut + 2,
-    },
-    (aliqua, elit) => eiusmod + ut * elit
-  );
-};
+.flex {
+    display: flex;
+}
+```
+
+</Step>
+
+<Step subtitle="Border-Radius">
+
+```html 1[25:37]
+<button class="flex m-8 rounded-full hover:bg-black">
+```
+
+```css
+.m-8 {
+    margin: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+```
+
+</Step>
+
+<Step subtitle="Pseudo-Styles">
+
+```html 1[38:52]
+<button class="flex m-8 rounded-full hover:bg-black">
+```
+
+```css
+.m-8 {
+    margin: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.bg-black:hover {
+    background-color: #000000;
+}
 ```
 
 </Step>
@@ -148,5 +120,191 @@ const sed = (eiusmod, tempor, incididunt) => {
 
 ---
 
-docs:  
-[codesurfer.pomb.us](https://codesurfer.pomb.us)
+# Tailwind CSS ist eine API für ein Designsystem
+
+Viele Möglichkeiten, aber nicht unendlich viele.
+
+---
+
+<CodeSurfer>
+
+```js title="Tailwind CSS ist einfach zu erweitern"
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
+
+```js title="Tailwind CSS ist einfach zu erweitern" subtitle="Fonts austauschen"
+const defaultTheme = require('@tailwindcss/defaultTheme')
+
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+```js title="Tailwind CSS ist einfach zu erweitern" subtitle="Farben austauschen"
+const defaultTheme = require('@tailwindcss/defaultTheme')
+const colors = require('@tailwindcss/colors')
+
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        green: colors.emerald
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
+
+```js title="Tailwind CSS ist einfach zu erweitern" subtitle="Plugins hinzufügen"
+const defaultTheme = require('@tailwindcss/defaultTheme')
+const colors = require('@tailwindcss/colors')
+
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        green: colors.emerald
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [require('@tailwindcss/typography')],
+}
+
+```
+
+</CodeSurfer>
+
+---
+
+# Was ist Tailwind CSS nicht?
+
+---
+
+# Tailwind CSS ist keine Component-Library
+
+- Keine `.card` oder `.button`-Klassen
+- [Tailwind UI](https://tailwindui.com) ist eine coole von den Entwicklern von Tailwind CSS
+
+---
+
+# Tailwind CSS ist keine Inline-Styles
+
+---
+
+# Tailwind CSS ist nicht die Lösung für jeden
+
+🤷‍♂️
+
+---
+
+# Lasst uns eine Card-Komponente bauen
+
+<div class="chat-notification">
+  <div class="chat-notification-logo-wrapper">
+    <img class="chat-notification-logo" src="/img/logo.svg" alt="ChitChat Logo" />
+  </div>
+  <div class="chat-notification-content">
+    <h4 class="chat-notification-title">ChitChat</h4>
+    <p class="chat-notification-message">You have a new message!</p>
+  </div>
+</div>
+
+---
+
+<CodeSurfer>
+
+```html
+<div class="chat-notification">
+  <div class="chat-notification-logo-wrapper">
+    <img class="chat-notification-logo" src="/img/logo.svg" alt="ChitChat Logo">
+  </div>
+  <div class="chat-notification-content">
+    <h4 class="chat-notification-title">ChitChat</h4>
+    <p class="chat-notification-message">You have a new message!</p>
+  </div>
+</div>
+
+<style>
+  .chat-notification {
+    display: flex;
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .chat-notification-logo-wrapper {
+    flex-shrink: 0;
+  }
+  .chat-notification-logo {
+    height: 3rem;
+    width: 3rem;
+  }
+  .chat-notification-content {
+    margin-left: 1.5rem;
+    padding-top: 0.25rem;
+  }
+  .chat-notification-title {
+    color: #1a202c;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  .chat-notification-message {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+</style>
+```
+
+</CodeSurfer>
+
+---
+
+# Danke!
+
+## 🙏
+
+## [studnitz.dev](https://studnitz.dev)
+
+## [@jvstudnitz](https://twitter.com/jvstudnitz)
+
+---
