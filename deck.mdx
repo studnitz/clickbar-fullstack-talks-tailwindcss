@@ -6,14 +6,92 @@ import {
 import { Image } from 'mdx-deck'
 import { github, nightOwl } from "@code-surfer/themes";
 import card from "./card.png"
+import scales1 from "./scales1.png"
+import scales2 from "./scales2.png"
+import colors from "./colors.png"
+import clasesGif from "./button-classes.gif"
 
 export const theme = nightOwl;
 
 # Tailwind CSS
 
-## Schnell moderne Webseiten bauen 💨
-
 ### Slides auf [tailwindcss-talk.netlify.app](https://tailwindcss-talk.netlify.app/)
+
+---
+
+# Pssst...
+
+---
+
+# Ich war nie gut in CSS
+
+---
+
+# Table-Layouts waren der Shit für mich
+
+---
+
+# Dann kam Bootstrap
+
+<img src="https://getbootstrap.com/docs/3.4/examples/screenshots/theme.jpg" />
+
+---
+
+# Und Material Design
+
+<img src="https://www.sketchappsources.com/resources/source-image/baseline-material-design-components-marina.jpg" />
+
+---
+
+# Und Bulma, und, und, und...
+
+---
+
+# Aber CSS schreiben ohne Framework
+
+---
+
+# 🙅‍♂️
+
+---
+
+# Es gibt SASS, LESS, Stylus
+
+---
+
+# Mach deine Architektur mit OOCSS
+
+---
+
+# ITCSS, BEMIT
+
+---
+
+# Oder doch BEM?
+
+---
+
+### Ist das nun `search-form__content__input` oder `search-form__input`?
+
+---
+
+# Naming CSS Classes
+
+<img src="https://media1.tenor.com/images/fb3f2d1e814190100a4ae401b1660d5b/tenor.gif" />
+
+---
+
+# Und warum wächst das CSS-File trotzdem wie Unkraut?
+
+---
+
+# Aber dann kam...
+
+---
+
+# Tailwind CSS
+
+## Schnell moderne Webseiten bauen ⚡️
 
 ---
 
@@ -22,7 +100,7 @@ export const theme = nightOwl;
 - 🧑‍💻 Arbeite bei clickbar.
 - 👨‍🎓 Studiere Informatik
 - 🕺 Tanze Swing in meiner Freizeit
-- 🐥 [bin auf Twitter](https://twitter.com/jvstudnitz)
+- 🐥 [bin auf Twitter (@jvstudnitz)](https://twitter.com/jvstudnitz)
 
 ---
 
@@ -34,37 +112,35 @@ export const theme = nightOwl;
 
 ---
 
-# Tailwind CSS ist Utility-first
-
 <CodeSurferColumns themes={[nightOwl, github]}>
 
-<Step title="Sehr viele Klassen, die direkt auf eine CSS-Property und einen Wert mappen. (meistens)" subtitle="Margin">
-
-```html 1[21:23]
-<button class="flex m-8 rounded-full hover:bg-black">
-```
-
-```css
-.m-8 {
-    margin: 2rem;
-}
-```
-
-</Step>
-
-<Step subtitle="flex">
+<Step title="Sehr viele Klassen, die direkt auf eine CSS-Property und einen Wert mappen. (meistens)" subtitle="Flex">
 
 ```html 1[16:20]
 <button class="flex m-8 rounded-full hover:bg-black">
 ```
 
 ```css
-.m-8 {
-    margin: 2rem;
-}
-
 .flex {
     display: flex;
+}
+```
+
+</Step>
+
+<Step subtitle="margin">
+
+```html 1[21:23]
+<button class="flex m-8 rounded-full hover:bg-black">
+```
+
+```css
+.flex {
+    display: flex;
+}
+
+.m-8 {
+    margin: 2rem;
 }
 ```
 
@@ -77,12 +153,12 @@ export const theme = nightOwl;
 ```
 
 ```css
-.m-8 {
-    margin: 2rem;
-}
-
 .flex {
     display: flex;
+}
+
+.m-8 {
+    margin: 2rem;
 }
 
 .rounded-full {
@@ -99,12 +175,12 @@ export const theme = nightOwl;
 ```
 
 ```css
-.m-8 {
-    margin: 2rem;
-}
-
 .flex {
     display: flex;
+}
+
+.m-8 {
+    margin: 2rem;
 }
 
 .rounded-full {
@@ -122,9 +198,39 @@ export const theme = nightOwl;
 
 ---
 
+# Die Freiheit kein CSS schreiben zu müssen
+
+![Meme](https://i.imgflip.com/4zx4f1.jpg)
+
+---
+
+# Tailwind CSS tut den Augen weh
+
+## (am Anfang)
+
+---
+
+# Spoiler-Alert
+
+<img src={clasesGif} width="1600" height="910" />
+
+---
+
 # Tailwind CSS ist eine API für ein Designsystem
 
 Viele Möglichkeiten, aber nicht unendlich viele.
+
+---
+
+<img src={scales1}  />
+
+---
+
+<img src={scales2} />
+
+---
+
+<img src={colors} />
 
 ---
 
@@ -226,13 +332,40 @@ module.exports = {
 
 ---
 
-# Tailwind CSS ist keine Inline-Styles
+# Tailwind CSS sind keine Inline-Styles
+
+---
+
+# Inline-Styles haben
+
+- keine Constraints
+- kein Responsive Design
+- Hover, Focus und andere Pseudo-Styles
 
 ---
 
 # Tailwind CSS ist nicht die Lösung für jeden
 
 🤷‍♂️
+
+---
+
+# Was wir heute machen werden
+
+---
+
+# Den Tailwind-Ansatz mit anderen Methodiken vergleichen
+
+---
+
+# Eine (präparierte) Webseite nachbauen
+
+- In kurzer Zeit
+- Mit modernen CSS-Features
+
+---
+
+# Hoffentlich das ein oder andere lernen 🧠
 
 ---
 
@@ -496,7 +629,7 @@ ___
 
 ___
 
-# 💡 Tip: Nutzt die vorhanden [Tailwind-Farben](https://tailwindcss.com/docs/customizing-colors#color-palette-reference)
+# 💡 Tipp: Nutzt die vorhandenen [Tailwind-Farben](https://tailwindcss.com/docs/customizing-colors#color-palette-reference)
 
 ---
 
@@ -518,7 +651,7 @@ module.exports = {
 
 ---
 
-# 💡 Tip: Fangt mit den kleinsten Breakpoint an
+# 💡 Tipp: Fangt mit den kleinsten Breakpoint an
 
 ---
 
@@ -529,7 +662,7 @@ module.exports = {
 
 ---
 
-# 💡 Tip: `space-x` und `space-y` sind dein Freund
+# 💡 Tipp: `space-x` und `space-y` sind dein Freund
 
 ## Manchmal tun es auch Spacer-`<div>`s
 
@@ -605,7 +738,7 @@ A bg gradient to bottom from cyan 50 to emerald 200
 </h1>
 ```
 
-```diff 1[12:35]
+```diff 1,7
 ```
 
 ```diff 3[42:88]
@@ -665,7 +798,7 @@ ___
 
 ---
 
-## 💡 Tip: Tailwinds `ring`-Utilities nutzen für Focus-Styles
+## 💡 Tipp: Tailwinds `ring`-Utilities nutzen für Focus-Styles
 
 ## Sexy *und* accessible
 
@@ -678,12 +811,51 @@ ___
 
 ---
 
-### 💡 Tip: Keine Angst vor neuen `variants` in der `tailwind.config.js`
+### 💡 Tipp: Keine Angst vor neuen `variants` in der `tailwind.config.js`
 
 ---
 
+<CodeSurfer>
+
 ```js
 module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+
+```js title=":disabled Styles"
+module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {
+      opacity: ["disabled"],
+      cursor: ["disabled"],
+    },
+  },
+  plugins: [],
+}
+```
+
+```js title=":active Styles"
+module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
   variants: {
     extend: {
       opacity: ["disabled"],
@@ -691,15 +863,285 @@ module.exports = {
       translate: ["active"],
     },
   },
+  plugins: [],
 }
 ```
 
+</CodeSurfer>
+
+---
+
+# Weiter mit den `<Button>`
+
+---
+
+# Button physisch herunterdrücken
+
+`transform active:translate-y-px`
+
+---
+
+# Schöne Transitions zwischen den States
+
+`transition`
+
+---
+
+# Hover-Effekt
+
+`opacity-80 hover:opacity-100`
+
+---
+
+# Disabled State besser visualisieren
+
+`disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none`
+
+---
+
+# `<Input>`
+
+---
+
+## 💡 Tipp: `@tailwindcss/forms`-Plugin benutzen
+
+---
+
+<CodeSurfer>
+
+```js
+module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {
+      opacity: ["disabled"],
+      cursor: ["disabled"],
+      translate: ["active"],
+    },
+  },
+  plugins: [],
+}
+```
+
+```js
+module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {
+      opacity: ["disabled"],
+      cursor: ["disabled"],
+      translate: ["active"],
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+}
+```
+
+</CodeSurfer>
+
+---
+
+# Focus 💍
+
+`focus:ring-cyan-700 focus:ring focus:ring-offset-2 focus:outline-none`
+
+---
+
+- abgerundete Ecken
+- Placeholder gray-500
+- block
+
+---
+
+# Blog-Section
+
+---
+
+## Die Headline
+
+---
+
+## `<h1>`, `<h2>`, usw. können auch Children haben
+
+Die dann gestyled werden können
+
+---
+
+- Frisch aus der Presse
+  - emerald-800
+  - medium bold
+  - zentriert
+  - all caps
+- Blogposts
+  - emerald-900
+  - semibold
+
+---
+
+# 💡 Typographie schnelle Wins
+
+---
+
+# `uppercase tracking-wide`
+
+---
+
+# `text-3xl tracking-tight`
+
+---
+
+
+# `<BlogPostCard>`
+
+---
+
+# Die Liste
+
+## `grid gap-4`
+
+---
+
+# Die Karte
+
+(hoffentlich ausm Handgelenk)
+
+---
+
+# Coole Hover-Styles
+
+### `transition transform hover:-translate-y-1`
+
+---
+
+# 💡 Tipp: Größen können auch negativ sein
+
+---
+
+# Einfach ein `-` vor die Utility
+
+- `-m-2`
+- `-translate-y-1`
+- `-rotate-45`
+
+---
+
+# Klick = ⬇️
+
+## `active:translate-y-0`
+
+---
+
+# Responsive Design
+
+---
+
+# Tailwind kommt mit 5 Breakpoints
+
+| Breakpoint prefix | Minimum width | CSS |
+| --- | --- | --- |
+| `sm` | 640px | `@media (min-width: 640px) { ... }` |
+| `md` | 768px | `@media (min-width: 768px) { ... }` |
+| `lg` | 1024px | `@media (min-width: 1024px) { ... }` |
+| `xl` | 1280px | `@media (min-width: 1280px) { ... }` |
+| `2xl` | 1536px | `@media (min-width: 1536px) { ... }` |
+
+---
+
+<CodeSurfer>
+
+```html title="⚠️ Achtung: Breakpoint sm ist nicht der Prefix für mobile"
+<div class="sm:text-center"></div>
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```html title="✅ Kein Prefix ist mobile-first"
+<div class="text-center sm:text-left"></div>
+```
+
+</CodeSurfer>
+
+---
+
+# Headlines responsiver
+
+---
+
+# `<form>` responsiver
+
+---
+
+# Aus `flex-col` wird `flex-row`
+
+---
+
+# `<Input>` responsiver
+
+---
+
+## 💡 Tipp: Fluide Breiten mit `max-w-{sm,md,lg,xl}` und `w-full`
+
+---
+
+# `<Button>` responsiver
+
+---
+
+## `flex-1` ?
+## `flex-grow-1` ?
+## `flex-shrink-0` ?
+
+---
+
+## Ich geb's zu, die Flexbox-Spec habe ich nicht zu 100% im Blut
+
+---
+
+## Aber dank Tailwind kann man schnell ausprobieren
+
+---
+
+# *probiere*
+
+---
+
+## Grid kann auch ein guter Ersatz sein
+
+---
+
+# BlogPost Grid responsiver
+
+---
+
+# Zielgerade! 🏁
+
+---
+
+# Breakpoint `md`
+
+---
+
+# Breakpoint `lg`
+
+---
+
+# 🏁
 
 ---
 
 ## Danke! 🙏
-
-### [studnitz.dev](https://studnitz.dev)
 
 ### [@jvstudnitz](https://twitter.com/jvstudnitz)
 
